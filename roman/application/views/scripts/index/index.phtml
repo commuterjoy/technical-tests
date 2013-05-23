@@ -1,0 +1,95 @@
+<html>
+		<head>
+    	<title>Roman numeral converter</title>
+		<head>
+            
+		<body>
+
+      	<h1>Roman numeral converter</h1>
+
+				<?php
+				        
+					function convert($num) {
+
+					 	$numerals = array(
+							1000 => "M",
+							900  => "CM",
+							500  => "D", 																
+							400  => "CD",								
+							100  => "C",								
+							90 	 => "XC",								
+							50 	 => "L",								
+							40 	 => "XL",								
+							10 	 => "X", 								
+							9  	 => "IX",
+							5  	 => "V",																
+							4	 => "IV",	 
+							1 	 => "I"								 						
+						 );						
+
+
+						if (is_numeric($num)) {    
+							            
+							$roman = ''; 
+
+							foreach ($numerals as $key => $value) {
+								while ($num >= $key) {
+							      $roman .= $value;
+							      $num   -= $key;
+							    } 
+						  	}       
+						
+							return $roman;
+							
+						} else {
+							
+							$number = 0;     
+							
+							foreach($numerals as $key => $value) {
+
+								while (strpos($num, $value) === 0) { 
+									$number += $key;
+									$num = substr($num, strlen($value));
+								}                                                    
+								
+							}
+							
+							return $number;
+							
+						}
+							 	
+					}    
+				
+					if (!isset($_GET['convert'])) {
+				
+				?>      
+				
+				<h2>Enter your number ...</h2>
+
+				<form method=GET action=".">
+					<input type=text name="convert" value="" />
+					<input type="submit">
+				</form>                        
+				
+				<?php
+				 
+					} else {
+				
+				?>
+				   
+				 <h2>Your converted number is ...</h2>
+				
+				 <p><?php echo convert($_GET['convert']); ?>
+				
+				<?php
+
+					}
+				
+				?>				
+				
+				
+
+		</body>
+    
+</html>
+    

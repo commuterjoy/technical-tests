@@ -1,0 +1,21 @@
+REQUIREMENTS FOR BBC FOOD RECIPES PAGE
+--------------------------------------
+
+http://www.bbc.co.uk/food/recipes/
+
+Search bar
+----------
+
+We would like a search bar at the top of the page to help user's find recipes. The design team has produced a design that implements a Google suggest style drop-down and would really like that to get implemented.
+
+We'd also like to display some recent popular terms and some of the top recipes recommended by our users.
+
+All time favourites
+-------------------
+
+We'd like a section that links to the top 16 all time favourites. There should be an image with each link and we'd like it displayed in an alphabetical order.
+
+Cooking with ...
+----------------
+
+To have a section where we can link through to recipes using certain ingredients, there should be 12 different foods to cook with and an image of each one.
